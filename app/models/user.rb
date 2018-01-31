@@ -3,4 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  has_many :strains, foreign_key: :created_by
+
+  def created_by
+    User.find(created_by)
+  end
 end

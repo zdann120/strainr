@@ -1,0 +1,29 @@
+p#notice
+  = notice
+p
+  strong
+    | Strain:
+  = @rating.strain
+p
+  strong
+    | User:
+  = @rating.user
+p
+  strong
+    | Score:
+  = @rating.score
+p
+  strong
+    | Comment:
+  = @rating.comment
+p
+  strong
+    | Product type:
+  = @rating.product_type
+p
+  strong
+    | Token:
+  = @rating.token
+= link_to 'Edit', edit_rating_path(@rating)
+|  | 
+= link_to 'Back', ratings_path

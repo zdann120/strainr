@@ -56,14 +56,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 gem 'devise_invitable'
-gem 'simple_form'
+gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'active_interaction'
 gem 'pry-rails'
 gem 'bootstrap'
 gem 'flutie'
-gem 'activeadmin'
 
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-end
+#group :development do
+#  gem 'better_errors'
+#  gem 'binding_of_caller'
+#end
+
+gem 'slim-rails'

@@ -1,0 +1,6 @@
+= simple_form_for @strain do |f|
+  = f.input :name
+  = f.input :variant, as: :select,
+    collection: ['Indica', 'Sativa', 'Hybrid']
+  = f.submit class: 'btn btn-success'
+

@@ -1,0 +1,17 @@
+p#notice
+  = notice
+p
+  strong
+    | Name:
+  = @strain.name
+p
+  strong
+    | Variant:
+  = @strain.variant
+p
+  strong
+    | Created by:
+  = @strain.created_by
+= link_to 'Edit', edit_strain_path(@strain)
+|  | 
+= link_to 'Back', strains_path

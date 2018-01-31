@@ -1,0 +1,31 @@
+p#notice
+  = notice
+h1
+  | Strains
+table.table
+  thead
+    tr
+      th
+        | Name
+      th
+        | Variant
+      th
+        | Created by
+      th[colspan="3"]
+  tbody
+    - @strains.each do |strain|
+      tr
+        td
+          = strain.name
+        td
+          = strain.variant
+        td
+          = strain.created_by
+        td
+          = link_to 'Show', strain
+        td
+          = link_to 'Edit', edit_strain_path(strain)
+        td
+          = link_to 'Destroy', strain, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to 'New Strain', new_strain_path, class: 'btn btn-primary'

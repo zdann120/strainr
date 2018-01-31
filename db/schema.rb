@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 2018_01_31_212019) do
 
   create_table "strains", force: :cascade do |t|
     t.string "name"
-    t.string "variant"
     t.integer "created_by"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "variant"
     t.index ["name"], name: "index_strains_on_name", unique: true
   end
 

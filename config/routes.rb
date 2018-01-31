@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
   resources :ratings
   resources :strains
   devise_for :users
