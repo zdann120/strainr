@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :strains, foreign_key: :created_by
+  has_many :ratings
 
   def created_by
     User.find(created_by)

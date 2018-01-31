@@ -1,11 +1,9 @@
-= simple_form_for(@rating) do |f|
+= simple_form_for([@strain, @rating]) do |f|
   = f.error_notification
   .form-inputs
-    = f.association :strain
-    = f.association :user
-    = f.input :score
+    = f.input :score, as: :select, collection: 1..10
     = f.input :comment
-    = f.input :product_type
-    = f.input :token
+    = f.input :product_type, as: :select,
+      collection: %w(Flower Edible Concentrate Tincture Other)
   .form-actions
-    = f.button :submit
+    = f.button :submit, class: 'btn btn-success'

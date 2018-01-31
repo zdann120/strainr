@@ -1,17 +1,27 @@
-p#notice
-  = notice
-p
-  strong
-    | Name:
-  = @strain.name
-p
-  strong
-    | Variant:
-  = @strain.variant
-p
-  strong
-    | Created by:
-  = @strain.created_by
-= link_to 'Edit', edit_strain_path(@strain)
-|  | 
+.row
+  .col-md-4
+    h1 = @strain.name.titleize
+    p.lead = @strain.variant.titleize
+  .col-md-8
+    br
+    = link_to 'Add a Review', new_strain_rating_path(@strain),
+      class: 'btn btn-lg btn-success'
+hr
+h3 Reviews
+table.table.table-sm.table-bordered.table-striped
+  thead
+    tr
+      th Reviewer
+      th Score
+      th Comment
+  tbody
+    - @strain.ratings.each do |rating|
+      tr
+        td = rating.user.email
+        td = rating.score
+        td = rating.comment
+    tr.table-info
+      th.text-right[colspan="2"] Average Score
+      td = @strain.ratings.average(:score)
+
 = link_to 'Back', strains_path

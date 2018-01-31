@@ -7,5 +7,9 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body[class="#{body_class}"]
+    = render 'layouts/navigation'
     .container
+      - if notice
+        div.alert.alert-info
+          = notice
       = yield
