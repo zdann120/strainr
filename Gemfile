@@ -68,3 +68,4 @@ gem 'flutie'
 #end
 
 gem 'slim-rails'
+gem 'nokogiri', '1.8.1'
