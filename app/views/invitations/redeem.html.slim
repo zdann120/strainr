@@ -1,0 +1,7 @@
+h1 Create an Account
+= simple_form_for @form, url: invitations_redeem_path do |f|
+  = f.input :code, label: 'Invitation Number'
+  = f.input :email
+  = f.input :password
+  = f.input :password_confirmation
+  = f.submit 'Create Account', class: 'btn btn-primary'

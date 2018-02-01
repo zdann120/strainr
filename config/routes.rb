@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'invitations/redeem'
+  post 'invitations/redeem', to: 'invitations#register'
   resources :strains do
     resources :ratings
   end

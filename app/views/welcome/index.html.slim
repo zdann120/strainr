@@ -2,3 +2,5 @@ h1 Welcome to Strainr!
 p.lead 
   | Strainr is a repository of marijuana strain reviews. Access is currently
     by invitation only.
+- unless user_signed_in?
+  p.lead Have an invitation? #{link_to 'Click Here', invitations_redeem_path}
