@@ -1,7 +1,7 @@
 class StrainsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @strains = Strain.all
+    @strains = Strain.search(params[:search]).order(name: :asc)
   end
 
   def show

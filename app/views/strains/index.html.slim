@@ -1,7 +1,12 @@
 p#notice
   = notice
-h1
-  | Strains
+.row
+  .col-md-4
+    h1
+      | Strains
+  .col-md-8
+    = form_with url: strains_path, local: true, method: :get do |f|
+      = f.text_field :search, class: 'form-control'
 table.table.table-bordered.table-striped.table-hover
   thead
     tr

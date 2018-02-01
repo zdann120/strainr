@@ -69,3 +69,4 @@ gem 'flutie'
 
 gem 'slim-rails'
 gem 'nokogiri', '1.8.1'
+gem 'search_cop'
