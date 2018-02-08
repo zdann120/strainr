@@ -17,7 +17,7 @@ table.table.table-sm.table-bordered.table-striped
   tbody
     - @strain.ratings.each do |rating|
       tr
-        td = rating.user.email
+        td = rating.user.human_name
         td = rating.score
         td = rating.comment
     tr.table-info

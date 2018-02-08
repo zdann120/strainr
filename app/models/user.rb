@@ -9,4 +9,12 @@ class User < ApplicationRecord
   def created_by
     User.find(created_by)
   end
+
+  def human_name
+  	if first_name.blank? && last_name.blank?
+  	  email
+  	else
+  	  [first_name, last_name].join(' ')
+    end
+  end
 end
