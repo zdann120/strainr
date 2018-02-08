@@ -16,6 +16,6 @@ class InvitationsController < ApplicationController
   private
 
   def invite_params
-    params.require(:redeem_invite).permit(:code, :email, :password, :password_confirmation)
+    params.require(:redeem_invite).permit(:code, :email, :password, :password_confirmation, :first_name, :last_name)
   end
 end
